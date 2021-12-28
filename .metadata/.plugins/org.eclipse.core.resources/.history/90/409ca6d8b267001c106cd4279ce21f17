@@ -1,7 +1,0 @@
-package com.olx.repository;
-
-import org.springframework.data.jpa.repository.JpaRepository;
-
-public class CategoryRepo implements JpaRepository<T, ID> {
-
-}
