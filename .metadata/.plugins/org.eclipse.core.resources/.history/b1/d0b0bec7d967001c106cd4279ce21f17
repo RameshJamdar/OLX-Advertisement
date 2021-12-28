@@ -1,0 +1,14 @@
+package com.olx;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+@EnableEurekaClient
+public class OlxApiGatewayApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(OlxApiGatewayApplication.class, args);
+	}
+
+}

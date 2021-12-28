@@ -1,0 +1,5 @@
+package com.olx.repository;
+
+public interface StatusRepository extends JpaRepository<AdvStatusEntity, Integer> {
+
+}

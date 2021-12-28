@@ -1,0 +1,20 @@
+server:
+  port: 9000
+
+spring:
+
+  application:
+    name: masterdata-service
+  zipkin:
+    base-url: http://localhost:9411    
+  cloud:
+    discovery:
+      enabled: true
+    
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+  instance:
+    hostname: localhost     

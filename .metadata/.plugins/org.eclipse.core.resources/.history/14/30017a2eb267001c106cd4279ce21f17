@@ -1,0 +1,11 @@
+package com.olx.entity;
+
+import javax.persistence.Table;
+
+@Table("CATEGORIES");
+public class Categories {
+	private int id;
+	private String name;
+	private String Discription;
+
+}

@@ -1,0 +1,28 @@
+server:
+  port: 9001
+  
+spring:
+  application:
+     name: advertise-service
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true   
+    
+circuitbreaker:
+    instances:
+      STATUSNAME-FROM-MASTER-DATA-SERVICE:
+        registerHealthIndicator: true
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 5s
+      CATEGORYNAME-FROM-MASTER-DATA-SERVICE:
+        registerHealthIndicator: true
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 5s    

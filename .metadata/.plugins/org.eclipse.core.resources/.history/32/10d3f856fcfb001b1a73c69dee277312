@@ -1,0 +1,16 @@
+
+public class Test {
+	public static void main(String [] args) {
+		
+		System.out.println("\tR");
+		System.out.println("\t\tA");
+
+		System.out.println("\t\t\tM");
+
+		
+
+		
+		
+	}
+
+}

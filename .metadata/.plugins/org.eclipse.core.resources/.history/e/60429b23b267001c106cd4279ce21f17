@@ -1,0 +1,10 @@
+package com.olx.entity;
+
+
+@Table(CATEGORIES);
+public class Categories {
+	private int id;
+	private String name;
+	private String Discription;
+
+}

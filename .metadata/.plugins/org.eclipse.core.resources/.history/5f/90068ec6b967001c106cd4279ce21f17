@@ -1,0 +1,29 @@
+package com.olx.service;
+
+import java.util.List;
+
+import com.olx.entity.AdvStatus;
+import com.olx.entity.AdvStatusEntity;
+import com.olx.entity.CategoryEntity;
+
+public class MasterServiceImpl implements MasterService {
+
+	
+	@Autowired
+	CategoryRepository categoryRepository;
+	
+	@Autowired
+	StatusRepository statusRepository;
+	
+	@Override
+	public List<CategoryEntity> getAllCategories() {
+		List<CategoryEntity> categoryEntities = categoryRepository.findAll();
+	}
+
+	@Override
+	public List<AdvStatusEntity> getAllAdvertiseStatus() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

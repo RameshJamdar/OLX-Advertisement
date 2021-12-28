@@ -1,0 +1,22 @@
+package com.olx.service;
+
+import java.util.List;
+
+import org.springframework.stereotype.Service;
+
+import com.olx.entity.AdvertiseEntity;
+
+@Service
+public interface AdvertiseService {
+	
+	public AdvertiseEntity createNewAdvertise(AdvertiseEntity adverise);
+
+	public AdvertiseEntity updateAdvertise(int advertiseId);
+
+	public List<AdvertiseEntity> getUserAdvertises();
+
+	public AdvertiseEntity getUserAdvertiseById(int id);
+
+	public boolean deleteUserAdretiseById(int id);
+
+}

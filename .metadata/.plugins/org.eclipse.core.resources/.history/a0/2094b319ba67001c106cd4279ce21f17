@@ -1,0 +1,9 @@
+package com.olx.controller;
+
+
+public class MasterDataController {
+	
+	@Autowired
+	MasterDataService masterDataService;
+
+}

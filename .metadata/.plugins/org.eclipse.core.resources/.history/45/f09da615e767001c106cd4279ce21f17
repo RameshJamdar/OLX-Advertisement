@@ -1,0 +1,29 @@
+package com.olx.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.olx.entity.AdvertiseEntity;
+import com.olx.service.AdvertiseService;
+
+
+@RestController
+@RequestMapping("advertise")
+public class AdvertisesController {
+	
+	@Autowired
+	AdvertiseService advertisesService;
+	
+	@PostMapping(value="/advertise ")
+	public ResponseEntity<AdvertiseEntity> createNewAdvertise(@RequestBody AdvertiseEntity adverise){
+		 AdvertiseEntity advertiseEntity = advertisesService.createNewAdvertise(adverise);
+		 return new ResponseEntity<AdvertiseEntity>(advertiseEntity,HttpStatus.CREATED);
+		
+	}
+
+}

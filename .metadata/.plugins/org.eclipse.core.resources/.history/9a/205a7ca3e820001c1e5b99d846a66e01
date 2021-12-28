@@ -1,0 +1,21 @@
+
+public class Test {
+	public static void main(String [] args) {
+		
+		String value="red";
+		switch(value) {
+		case "red";
+		System.out.println("Fail");
+		
+		case "green";
+		System.out.println("ok");
+		}
+		
+
+		
+
+		
+		
+	}
+
+}

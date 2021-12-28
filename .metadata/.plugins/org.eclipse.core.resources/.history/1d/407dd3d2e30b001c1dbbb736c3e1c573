@@ -1,0 +1,24 @@
+package com.zensar.java8.lambda;
+
+public class MyLambdaAssignment {
+	
+	MathOperations addition = (int a, int b) -> (a + b);
+	System.out.println("Addition "+ addition.operation(5,10));
+	
+	MathOperations subtraction=(int a , int b)->a-b;
+	System.out.println("subtraction "+ subtraction.operation(5,10));
+	
+	MathOperations multiplication=(int a , int b)->a*b;
+	System.out.println("multiplication "+ multiplication.operation(5,10));
+	
+	MathOperations division=(int a , int b)->a/b;
+	System.out.println("division "+ division.operation(5,10));
+	
+}
+
+
+@FunctionalInterface
+interface MathOperations{
+	int operation(int a, int b);
+	
+}
