@@ -14,12 +14,12 @@ public interface AdvertiseService {
 	
 	public AdvertiseEntity createNewAdvertise(AdvertiseEntity advertiseEntity);
 
-	public AdvertiseEntity updateAdvertise(int advertiseId);
+	public AdvertiseEntity updateAdvertise(int id);
 
-	public List<AdvertiseEntity> getUserAdvertises();
+	public List<AdvertiseEntity> getAdvertises();
 
-	public AdvertiseEntity getUserAdvertiseById(int id);
+	public AdvertiseEntity getAdvertiseById(int id);
 
-	public boolean deleteUserAdretiseById(int id);
+	public String deleteAdvertiseById (int id);
 
 }

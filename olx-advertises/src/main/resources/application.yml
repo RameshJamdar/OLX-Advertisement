@@ -18,26 +18,35 @@ spring:
   application:
     name: OLX_Advertise
   zipkin:
-    base-url: http://localhost:9411 
+    base-url: http://localhost:9411  
+ 
       
 management:
   endpoints:
     web:
       exposure:
-        include: "*" 
+        include: "*"
+      base-path: /olx-Advertis-monitor  
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoint:
+    health:
+      show-details: always    
        
 resilience4j:
   circuitbreaker:
-   instances:
-      STATUS-FROM-MASTER-DATA-SERVICE:
-       register-health-indicator: true
-       automatic-transition-from-open-to-half-open-enabled: true
-       failure-rate-threshold: 50
-       minimum-number-of-calls: 5
-       permitted-number-of-calls-in-half-open-state: 3 
-       wait-duration-in-open-state: 5s
+    instances:
+      CATEGORY_CIRCUTE_BREAKER:
+        registerHealthIndicator: true
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+        failureRateThreshold: 50
+        minimumNumberOfCalls: 5
+        permittedNumberOfCallsInHalfOpenState: 3
+        waitDurationInOpenState: 10s
     
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
+   

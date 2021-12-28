@@ -27,23 +27,27 @@ public class AdvertiseServiceImpl implements AdvertiseService {
 	}
 
 	@Override
-	public List<AdvertiseEntity> getUserAdvertises() {
+	public List<AdvertiseEntity> getAdvertises() {
 		return advertiseRepository.findAll();
 	}
 
 	@Override
-	public AdvertiseEntity getUserAdvertiseById(int id) {
+	public AdvertiseEntity getAdvertiseById(int id) {
 		return advertiseRepository.getById(id);
 	}
 
 	@Override
-	public boolean deleteUserAdretiseById(int id) {
-		Optional<AdvertiseEntity> optionalAdvertiseEntity = advertiseRepository.findById(id);
-		if(optionalAdvertiseEntity.isPresent()) {
+	public String deleteAdvertiseById(int id)
+	{
+		if(advertiseRepository.existsById(id))
 			advertiseRepository.deleteById(id);
-			return true;
-			}else
-		return false;
+		else
+			return "Data Not Present";
+		if(advertiseRepository.existsById(id))
+		{
+			return "Not Deleted Successfully !!!";
+		}
+		return "Deleted Successfully !!!";
 	}
 
 }

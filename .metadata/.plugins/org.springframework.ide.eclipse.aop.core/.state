@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aop-reference-model>
+<aop-project name="olx-masterdata"/>
+<aop-project name="olx-api-gateway"/>
 <aop-project name="spring-data-jpa"/>
+<aop-project name="OLX-Eureka-Server"/>
+<aop-project name="olx-advertises"/>
 </aop-reference-model>

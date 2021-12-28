@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=spring-data-jpa/C:\/Users\/Suraj\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.5.6\/spring-data-jpa-2.5.6.jar&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1635840823209"/>
+<typeInfo handle="=olx-masterdata/src\/main\/java&lt;com.olx.service{MasterService.java[MasterService" modifiers="513" timestamp="1640680581849"/>
+<typeInfo handle="=olx-masterdata/C:\/Users\/Suraj\/.m2\/repository\/org\/springframework\/data\/spring-data-jpa\/2.6.0\/spring-data-jpa-2.6.0.jar&lt;org.springframework.data.jpa.repository(JpaRepository.class[JpaRepository" modifiers="1537" timestamp="1640671708747"/>
+<typeInfo handle="=olx-advertises/src\/main\/java&lt;com.olx.service{AdvertiseService.java[AdvertiseService" modifiers="513" timestamp="1640717190541"/>
 </typeInfoHistroy>
